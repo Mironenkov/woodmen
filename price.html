@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <title>Категории</title>
+    <title>Цены</title>
     <meta name="robots" content="noindex">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -92,187 +92,117 @@
     <section class="content-block content-block-1 wm-bread-crumb">
         <div class="main">
             <div class="wm-bread-crumb-block">
-                <a href="#" class="wm-bread-crumb-block__link">Главная</a><span class="wm-bread-crumb-block__triangle"><i class="fa fa-caret-right" aria-hidden="true"></i></span><a href="#" class="wm-bread-crumb-block__link">Дома из бруса</a>
+                <a href="#" class="wm-bread-crumb-block__link">Главная</a><span class="wm-bread-crumb-block__triangle"><i class="fa fa-caret-right" aria-hidden="true"></i></span><a href="#" class="wm-bread-crumb-block__link">Цены</a>
             </div>
         </div>
     </section>
     <!-- End section bread-crumb -->
 
-    <!-- Section description -->
-    <section class="content-block content-block-2 wm-description">
+    <!-- Section price -->
+    <section class="content-block content-block-2 wm-price">
         <div class="main">
-            <h2 class="wm-description__title main-title">Бесплатная консультация</h2>
-            <div class="wm-description__sub-title">Мы объединили дома в категории для Вашего удобства</div>
-            <div class="wm-description__text">Выберите любое значение в одной из категорий</div>
-        </div>
-    </section>
-    <!-- End section description -->
-
-    <!-- Section filter -->
-    <section class="content-block content-block-3 wm-filter">
-        <div class="main">
-            <form action="">
-                <div class="wm-filter-block">
-                    <div class="wm-filter-block__item wm-filter-item wm-filter-item--size">
-                        <div class="wm-filter-item__title">Габариты</div>
-                        <div class="wm-filter-item__radio-block">
-                            <ul class="wm-filter-radio-block">
-                                <li>
-                                    <input type="radio" name="wm-filter" value="6x6" id="wm-filter-size-1" class="wm-filter-radio-block__input">
-                                    <label for="wm-filter-size-1">6 x 6</label>
-                                </li>
-                                <li>
-                                    <input type="radio" name="wm-filter" value="8x6" id="wm-filter-size-2" class="wm-filter-radio-block__input">
-                                    <label for="wm-filter-size-2">8 x 6</label>
-                                </li>
-                                <li>
-                                    <input type="radio" name="wm-filter" value="9x6" id="wm-filter-size-3" class="wm-filter-radio-block__input">
-                                    <label for="wm-filter-size-3">9 x 6</label>
-                                </li>
-                                <li>
-                                    <input type="radio" name="wm-filter" value="9x7" id="wm-filter-size-4" class="wm-filter-radio-block__input">
-                                    <label for="wm-filter-size-4">9 x 7</label>
-                                </li>
-                            </ul>
+            <h2 class="wm-price__title main-title">Цены</h2>
+            <div class="wm-price-block">
+                <div class="wm-price-block__title">Выберите комплектацию и наш менеджер рассчитает стоимость</div>
+                <div class="wm-price-block__calculator">
+                    <form action="">
+                        <div class="wm-price-calculator">
+                            <div class="wm-price-calculator__row wm-price-row">
+                                <div class="wm-price-row__name">
+                                    <div class="wm-price-name">Тип</div>
+                                </div>
+                                <div class="wm-price-row__select-wrap">
+                                    <select name="Type" class="wm-price-input">
+                                        <option value="">дом из бруса</option>
+                                        <option value="">дом из бруса</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="wm-price-calculator__row wm-price-row">
+                                <div class="wm-price-row__name">
+                                    <div class="wm-price-name">Количество этажей</div>
+                                </div>
+                                <div class="wm-price-row__select-wrap">
+                                    <select name="Floor" class="wm-price-input">
+                                        <option value="">1</option>
+                                        <option value="">2</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="wm-price-calculator__row wm-price-row">
+                                <div class="wm-price-row__name">
+                                    <div class="wm-price-name">Площадь (м<sup>2</sup>)</div>
+                                </div>
+                                <div class="wm-price-row__select-wrap"><input type="text" name="Square" class="wm-price-input"></div>
+                            </div>
+                            <div class="wm-price-calculator__row wm-price-row">
+                                <div class="wm-price-row__name">
+                                    <div class="wm-price-name">Фундамент</div>
+                                </div>
+                                <div class="wm-price-row__select-wrap">
+                                    <select name="Foundation" class="wm-price-input">
+                                        <option value="">пиленый брус 50х150</option>
+                                        <option value="">пиленый брус 50х150</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="wm-price-calculator__row wm-price-row">
+                                <div class="wm-price-row__name">
+                                    <div class="wm-price-name">Толщина</div>
+                                </div>
+                                <div class="wm-price-row__select-wrap">
+                                    <select name="Thickness" class="wm-price-input">
+                                        <option value="">пиленый брус 50х150</option>
+                                        <option value="">пиленый брус 50х150</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="wm-price-calculator__row wm-price-row">
+                                <div class="wm-price-row__name">
+                                    <div class="wm-price-name">Отделка</div>
+                                </div>
+                                <div class="wm-price-row__select-wrap">
+                                    <select name="Furnish" class="wm-price-input">
+                                        <option value="">пиленый брус 50х150</option>
+                                        <option value="">пиленый брус 50х150</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="wm-price-calculator__row wm-price-row">
+                                <div class="wm-price-row__name">
+                                    <div class="wm-price-name">Кровля</div>
+                                </div>
+                                <div class="wm-price-row__select-wrap">
+                                    <select name="Roof" class="wm-price-input">
+                                        <option value="">ондулин</option>
+                                        <option value="">ондулин</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="wm-price-calculator__row wm-price-row">
+                                <div class="wm-price-row__name">
+                                    <div class="wm-price-name">Внутрення отделка</div>
+                                </div>
+                                <div class="wm-price-row__select-wrap">
+                                    <select name="Trim" class="wm-price-input">
+                                        <option value="">пиленый брус 50х150</option>
+                                        <option value="">пиленый брус 50х150</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="wm-price-calculator__btn-wrap">
+                                <input type="submit" value="Отправить на просчет" class="wm-price-btn"/>
+                            </div>
                         </div>
-                    </div>
-                    <div class="wm-filter-block__item wm-filter-item wm-filter-item--price">
-                        <div class="wm-filter-item__title">Цена</div>
-                        <div class="wm-filter-item__radio">
-                            <ul class="wm-filter-radio-block">
-                                <li>
-                                    <input type="radio" name="wm-filter" value="to-300" id="wm-filter-price-1" class="wm-filter-radio-block__input">
-                                    <label for="wm-filter-price-1">до 300 т. руб</label>
-                                </li>
-                                <li>
-                                    <input type="radio" name="wm-filter" value="300-500" id="wm-filter-price-2" class="wm-filter-radio-block__input">
-                                    <label for="wm-filter-price-2">300-500 т. руб</label>
-                                </li>
-                                <li>
-                                    <input type="radio" name="wm-filter" value="from-500" id="wm-filter-price-3" class="wm-filter-radio-block__input">
-                                    <label for="wm-filter-price-3">от 500 т. руб</label>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="wm-filter-block__item wm-filter-item wm-filter-item--square">
-                        <div class="wm-filter-item__title">Площадь</div>
-                        <div class="wm-filter-item__radio">
-                            <ul class="wm-filter-radio-block">
-                                <li>
-                                    <input type="radio" name="wm-filter" value="to-100" id="wm-filter-square-1" class="wm-filter-radio-block__input">
-                                    <label for="wm-filter-square-1">до 100 м2</label>
-                                </li>
-                                <li>
-                                    <input type="radio" name="wm-filter" value="100-200" id="wm-filter-square-2" class="wm-filter-radio-block__input">
-                                    <label for="wm-filter-square-2">100-200 м2</label>
-                                </li>
-                                <li>
-                                    <input type="radio" name="wm-filter" value="from-200" id="wm-filter-square-3" class="wm-filter-radio-block__input">
-                                    <label for="wm-filter-square-3">от 200 м2</label>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="wm-sorting-block">
-                    <div class="wm-sorting-block__item">
-                        <div class="wm-sorting-radio-block">
-                            <span class="wm-sorting-radio-block__text">Сортировать по цене</span><span class="wm-sorting-radio-block__input">
-                            <input type="radio" name="wm-sorting" id="wm-sorting-1" class="wm-sorting__input" value="up">
-                            <label for="wm-sorting-1"><i class="fa fa-chevron-circle-up" aria-hidden="true"></i></label>
-                            <input type="radio" name="wm-sorting" id="wm-sorting-2" class="wm-sorting__input" value="down">
-                            <label for="wm-sorting-2"><i class="fa fa-chevron-circle-down" aria-hidden="true"></i></label>
-                            </span>
-                        </div>
-                    </div>
-                    <div class="wm-sorting-block__item">
-                        <div class="wm-sorting-results-block">По Вашему запросу показано 36 проектов</div>
-                    </div>
-                </div>
-            </form>
-        </div>
-    </section>
-    <!-- End section filter -->
-
-    <!-- Section category-projects -->
-    <section class="content-block content-block-4 wm-category-projects">
-        <div class="main">
-            <div class="wm-category-projects-block">
-                <div class="wm-category-projects-block__item ">
-                    <a href="#" class="wm-main-item">
-                        <div class="wm-main-item__image"><img src="images/project.png" alt="project" width="372" height="200"/></div>
-                        <div class="wm-main-item__info">
-                            <div class="wm-main-item__name"><span>Дом из бруса под ключ проект Д-36-К</span></div>
-                            <div class="wm-main-item__size">6 м х 6 м / 64 м<sup>2</sup></div>
-                            <div class="wm-main-item__price">От 220 000 руб</div>
-                        </div>
-                    </a>
-                    <a href="#" class="wm-main-item">
-                        <div class="wm-main-item__image"><img src="images/project.png" alt="project" width="372" height="200"/></div>
-                        <div class="wm-main-item__info">
-                            <div class="wm-main-item__name"><span>Дом из бруса под ключ проект Д-36-К</span></div>
-                            <div class="wm-main-item__size">6 м х 6 м / 64 м<sup>2</sup></div>
-                            <div class="wm-main-item__price">От 220 000 руб</div>
-                        </div>
-                    </a>
-                    <a href="#" class="wm-main-item">
-                        <div class="wm-main-item__image"><img src="images/project.png" alt="project" width="372" height="200"/></div>
-                        <div class="wm-main-item__info">
-                            <div class="wm-main-item__name"><span>Дом из бруса под ключ проект Д-36-К</span></div>
-                            <div class="wm-main-item__size">6 м х 6 м / 64 м<sup>2</sup></div>
-                            <div class="wm-main-item__price">От 220 000 руб</div>
-                        </div>
-                    </a>
-                </div>
-                <div class="wm-category-projects-block__item wm-category-projects-item-hidden">
-                    <a href="#" class="wm-main-item">
-                        <div class="wm-main-item__image"><img src="images/project.png" alt="project" width="372" height="200"/></div>
-                        <div class="wm-main-item__info">
-                            <div class="wm-main-item__name"><span>Дом из бруса под ключ проект Д-36-К</span></div>
-                            <div class="wm-main-item__size">6 м х 6 м / 64 м<sup>2</sup></div>
-                            <div class="wm-main-item__price">От 220 000 руб</div>
-                        </div>
-                    </a>
-                    <a href="#" class="wm-main-item">
-                        <div class="wm-main-item__image"><img src="images/project.png" alt="project" width="372" height="200"/></div>
-                        <div class="wm-main-item__info">
-                            <div class="wm-main-item__name"><span>Дом из бруса под ключ проект Д-36-К</span></div>
-                            <div class="wm-main-item__size">6 м х 6 м / 64 м<sup>2</sup></div>
-                            <div class="wm-main-item__price">От 220 000 руб</div>
-                        </div>
-                    </a>
-                    <a href="#" class="wm-main-item">
-                        <div class="wm-main-item__image"><img src="images/project.png" alt="project" width="372" height="200"/></div>
-                        <div class="wm-main-item__info">
-                            <div class="wm-main-item__name"><span>Дом из бруса под ключ проект Д-36-К</span></div>
-                            <div class="wm-main-item__size">6 м х 6 м / 64 м<sup>2</sup></div>
-                            <div class="wm-main-item__price">От 220 000 руб</div>
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <div class="wm-category-projects__more">
-                <div class="wm-category-projects-more">
-                    <div class="wm-category-projects-more__text">Показать еще</div>
+                    </form>
                 </div>
             </div>
         </div>
     </section>
-    <!-- End section category-projects -->
-
-    <!-- Section banner -->
-    <section class="content-block content-block-5 wm-banner">
-        <div class="main">
-            <div class="wm-banner-block">
-                <img src="images/banner.jpg" alt="banner" width="1156" height="200"/>
-            </div>
-        </div>
-    </section>
-    <!-- End section banner -->
+    <!-- End section calculator -->
 
     <!-- Section seo -->
-    <section class="content-block content-block-6 wm-seo">
+    <section class="content-block content-block-3 wm-seo">
         <div class="main">
             <div class="wm-seo-wrap">
                 <div class="wm-seo-wrap__info">
