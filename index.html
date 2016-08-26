@@ -100,9 +100,9 @@
     <!-- Section popular-projects -->
     <section class="content-block content-block-1 wm-popular-projects">
         <div class="main">
-            <h2 class="wm-popular-projects__title main-title">Популярные проекты</h2>
-            <div class="wm-popular-projects__link">
-                <a href="#" class="btn-link">Все дома из бруса</a>
+            <div class="wm-popular-projects__title-wrap">
+                <h2 class="wm-popular-projects__title main-title">Популярные проекты</h2>
+                <a href="#" class="wm-popular-projects__link under-btn">Все дома из бруса</a>
             </div>
             <div class="wm-popular-projects__block">
                 <div class="wm-popular-projects-block">
@@ -110,7 +110,7 @@
                         <a href="#" class="wm-main-item">
                             <div class="wm-main-item__image"><img src="images/project.png" alt="project" width="372" height="200"/></div>
                             <div class="wm-main-item__info">
-                                <div class="wm-main-item__name"><span>Дом из бруса под ключ проект Д-36-К</span></div>
+                                <div class="wm-main-item__name"><span class="wm-main-item-name">Дом из бруса под ключ проект Д-36-К</span></div>
                                 <div class="wm-main-item__size">6 м х 6 м / 64 м<sup>2</sup></div>
                                 <div class="wm-main-item__price">От 220 000 руб</div>
                             </div>
@@ -120,7 +120,7 @@
                         <a href="#" class="wm-main-item">
                             <div class="wm-main-item__image"><img src="images/project.png" alt="project" width="372" height="200"/></div>
                             <div class="wm-main-item__info">
-                                <div class="wm-main-item__name"><span>Дом из бруса под ключ проект Д-36-К</span></div>
+                                <div class="wm-main-item__name"><span class="wm-main-item-name">Дом из бруса под ключ проект Д-36-К</span></div>
                                 <div class="wm-main-item__size">6 м х 6 м / 64 м<sup>2</sup></div>
                                 <div class="wm-main-item__price">От 220 000 руб</div>
                             </div>
@@ -130,7 +130,7 @@
                         <a href="#" class="wm-main-item">
                             <div class="wm-main-item__image"><img src="images/project.png" alt="project" width="372" height="200"/></div>
                             <div class="wm-main-item__info">
-                                <div class="wm-main-item__name"><span>Дом из бруса под ключ проект Д-36-К</span></div>
+                                <div class="wm-main-item__name"><span class="wm-main-item-name">Дом из бруса под ключ проект Д-36-К</span></div>
                                 <div class="wm-main-item__size">6 м х 6 м / 64 м<sup>2</sup></div>
                                 <div class="wm-main-item__price">От 220 000 руб</div>
                             </div>
@@ -140,7 +140,7 @@
                         <a href="#" class="wm-main-item">
                             <div class="wm-main-item__image"><img src="images/project.png" alt="project" width="372" height="200"/></div>
                             <div class="wm-main-item__info">
-                                <div class="wm-main-item__name"><span>Дом из бруса под ключ проект Д-36-К</span></div>
+                                <div class="wm-main-item__name"><span class="wm-main-item-name">Дом из бруса под ключ проект Д-36-К</span></div>
                                 <div class="wm-main-item__size">6 м х 6 м / 64 м<sup>2</sup></div>
                                 <div class="wm-main-item__price">От 220 000 руб</div>
                             </div>
@@ -150,7 +150,7 @@
                         <a href="#" class="wm-main-item">
                             <div class="wm-main-item__image"><img src="images/project.png" alt="project" width="372" height="200"/></div>
                             <div class="wm-main-item__info">
-                                <div class="wm-main-item__name"><span>Дом из бруса под ключ проект Д-36-К</span></div>
+                                <div class="wm-main-item__name"><span class="wm-main-item-name">Дом из бруса под ключ проект Д-36-К</span></div>
                                 <div class="wm-main-item__size">6 м х 6 м / 64 м<sup>2</sup></div>
                                 <div class="wm-main-item__price">От 220 000 руб</div>
                             </div>
@@ -160,7 +160,7 @@
                         <a href="#" class="wm-main-item">
                             <div class="wm-main-item__image"><img src="images/project.png" alt="project" width="372" height="200"/></div>
                             <div class="wm-main-item__info">
-                                <div class="wm-main-item__name"><span>Дом из бруса под ключ проект Д-36-К</span></div>
+                                <div class="wm-main-item__name"><span class="wm-main-item-name">Дом из бруса под ключ проект Д-36-К</span></div>
                                 <div class="wm-main-item__size">6 м х 6 м / 64 м<sup>2</sup></div>
                                 <div class="wm-main-item__price">От 220 000 руб</div>
                             </div>
@@ -177,8 +177,8 @@
         <div class="main">
             <h2 class="wm-consulting__title sub-title">Бесплатная консультация</h2>
             <div class="wm-consulting__form">
-                <form action="">
-                    <input type="text" placeholder="Ваше имя"/><input type="tel" placeholder="Телефон"/><input type="submit" value="Отправить"/>
+                <form action="" class="wm-consulting-form">
+                    <input class="wm-consulting-form__input main-input" type="text" placeholder="Ваше имя"/><input class="wm-consulting-form__input main-input" type="tel" placeholder="Телефон"/><input class="wm-consulting-form__btn main-btn" type="submit" value="Отправить"/>
                 </form>
             </div>
         </div>
@@ -259,15 +259,23 @@
             <div class="wm-details-block">
                 <div class="wm-details-block__item">
                     <div class="wm-details-block-item">
-                        <h2 class="wm-details-block-item__title"></h2>
-                        <p class="wm-details-block-item__text"></p>
+                        <h2 class="wm-details-block-item__title">Строим в кредит</h2>
+                        <p class="wm-details-block-item__text">
+                            Синдром Тричера Коллинза был подробно описан в 1900 году британским врачом-офтальмологом Эдвардом Тричером Коллинзом. Он обнаруживается у 1 из 50 тысяч детей.
+                            <br><br>
+                            Ген TCOF1 отвечает за кодирование ядерного транспортного белка, который участвует в строительстве многих тканей в период эмбрионального развития, в том числе в формировании костей лицевой части черепа. Мутационные изменения приводят к появлению стоп-кодона, то есть к преждевременной остановке синтеза молекул и самоуничтожению соответствующих клеток. В результате у детей наблюдаются лицевые деформации.
+                        </p>
                         <div class="wm-details-block-item__btn"><a href="#" class="main-btn">Подробнее</a></div>
                     </div>
                 </div>
                 <div class="wm-details-block__item">
                     <div class="wm-details-block-item">
-                        <h2 class="wm-details-block-item__title"></h2>
-                        <p class="wm-details-block-item__text"></p>
+                        <h2 class="wm-details-block-item__title">Материнский капитал</h2>
+                        <p class="wm-details-block-item__text">
+                            Синдром Тричера Коллинза был подробно описан в 1900 году британским врачом-офтальмологом Эдвардом Тричером Коллинзом. Он обнаруживается у 1 из 50 тысяч детей.
+                            <br><br>
+                            Ген TCOF1 отвечает за кодирование ядерного транспортного белка, который участвует в строительстве многих тканей в период эмбрионального развития, в том числе в формировании костей лицевой части черепа. Мутационные изменения приводят к появлению стоп-кодона, то есть к преждевременной остановке синтеза молекул и самоуничтожению соответствующих клеток. В результате у детей наблюдаются лицевые деформации.
+                        </p>
                         <div class="wm-details-block-item__btn"><a href="#" class="main-btn">Подробнее</a></div>
                     </div>
                 </div>
@@ -283,7 +291,7 @@
     <section class="content-block content-block-5 wm-seo">
         <div class="main">
             <div class="wm-seo-wrap">
-                <div class="wm-seo-wrap__video" style="display: none">
+                <div class="wm-seo-wrap__video">
                     <iframe width="100%" height="540" src="https://www.youtube.com/embed/r_up4lEdBJk" frameborder="0" allowfullscreen></iframe>
                 </div>
                 <div class="wm-seo-wrap__info">
@@ -313,14 +321,14 @@
                 </div>
                 <div class="wm-question-block__info">
                     <div class="wm-question-info">
-                        <h2 class="wm-question-info__title">У Вас остались к нам вопросы?</h2>
+                        <h2 class="wm-question-info__title sub-title">У Вас остались к нам вопросы?</h2>
                         <div class="wm-question-info__sub-title">Закажите бесплатную консультацию!</div>
                         <div class="wm-question-info__form">
                             <form action="" class="wm-question-info-form">
                                 <div class="wm-question-info-form__inputs">
-                                    <input type="text"/>
-                                    <input type="tel"/>
-                                    <input type="submit" value="Отправить заявку"/>
+                                    <input class="wm-question-info-form-input main-input" type="text" name="Name" placeholder="Имя"/>
+                                    <input class="wm-question-info-form-input main-input" type="tel" name="Phone" placeholder="Телефон"/>
+                                    <input class="wm-question-info-form-btn sub-main" type="submit" value="Отправить заявку"/>
                                 </div>
                                 <div class="wm-question-info-form__dispatch">Заявка еще не отправлена</div>
                             </form>
@@ -347,24 +355,24 @@
                         <div class="wm-footer-right__column">
                             <nav class="wm-footer-navigation">
                                 <ul>
-                                    <li><a href="#">О компании</a></li>
-                                    <li><a href="#">Наши работы</a></li>
-                                    <li><a href="#">Отзывы</a></li>
-                                    <li><a href="#">Цены</a></li>
-                                    <li><a href="#">Статьи</a></li>
-                                    <li><a href="#">Контакты</a></li>
+                                    <li><a href="#" class="wm-footer-navigation__link">О компании</a></li>
+                                    <li><a href="#" class="wm-footer-navigation__link">Наши работы</a></li>
+                                    <li><a href="#" class="wm-footer-navigation__link">Отзывы</a></li>
+                                    <li><a href="#" class="wm-footer-navigation__link">Цены</a></li>
+                                    <li><a href="#" class="wm-footer-navigation__link">Статьи</a></li>
+                                    <li><a href="#" class="wm-footer-navigation__link">Контакты</a></li>
                                 </ul>
                             </nav>
-                        </div>
-                        <div class="wm-footer-right__column">
+                        <!--</div>-->
+                        <!--<div class="wm-footer-right__column">-->
                             <nav class="wm-footer-navigation">
                                 <ul>
-                                    <li><a href="#">Дома из бруса</a></li>
-                                    <li><a href="#">Каркасные дома</a></li>
-                                    <li><a href="#">Дома под усадку</a></li>
-                                    <li><a href="#">Бани из бруса</a></li>
-                                    <li><a href="#">В кредит</a></li>
-                                    <li><a href="#">Материнский капитал</a></li>
+                                    <li><a href="#" class="wm-footer-navigation__link">Дома из бруса</a></li>
+                                    <li><a href="#" class="wm-footer-navigation__link">Каркасные дома</a></li>
+                                    <li><a href="#" class="wm-footer-navigation__link">Дома под усадку</a></li>
+                                    <li><a href="#" class="wm-footer-navigation__link">Бани из бруса</a></li>
+                                    <li><a href="#" class="wm-footer-navigation__link">В кредит</a></li>
+                                    <li><a href="#" class="wm-footer-navigation__link"s>Материнский капитал</a></li>
                                 </ul>
                             </nav>
                         </div>
