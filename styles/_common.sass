@@ -115,6 +115,25 @@ textarea
 //Header-top
 .wm-header__top
   border-bottom: 1px solid #e5e5e5
+.wm-top__block
+  +flexbox
+  +flex-wrap(wrap)
+.wm-block__logo
+  +flex(1 1 200px)
+  min-width: 249px
+.wm-logo
+  margin: 20px 0 
+.wm-block__buttons
+  +flex(1 1 200px)
+  min-width: 249px
+.wm-buttons
+  text-align: center
+.wm-block__contact
+  +flex(1 1 200px)
+  min-width: 250px
+.wm-contact
+  margin: 20px 0
+  text-align: right
 .wm-buttons-link
   display: inline-block
   font-size: 12px
@@ -153,19 +172,27 @@ textarea
     position: relative
     top: 6px
 .wm-navigation
+  text-align: center
+  margin-bottom: 15px
+  ul
+    +clearfix
   li
-    display: block
-    text-align: center
-    padding: 3px 40px
+    display: inline-block
+    padding: 0 20px
+    border-right: 1px solid $color-base
   li:last-child
     border-right: none
 .wm-navigation__link
+  display: inline-block
   color: $color-base
+  padding: 3px 20px
   font-size: 14px
   line-height: 14px
   text-transform: uppercase
+  +border-radius(5px)
   &:hover
-    color: $main-color-theme
+    color: #ffffff
+    background-color: $main-color-theme
 
 //Header-bot
 .wm-header__bot
@@ -173,6 +200,11 @@ textarea
   background-size: cover
   border-top: 1px solid $main-color-theme
   border-bottom: 1px solid $main-color-theme
+.wm-bot
+  +flexbox
+  +flex-wrap(wrap)
+.wm-bot__block-category
+  +flex(1 1 250px)
 .wm-block-category
   display: block
   text-align: center
@@ -196,6 +228,12 @@ textarea
 .wm-popular-projects__link
   float: right
   line-height: 32px
+.wm-popular-projects-block
+  +flexbox
+  +flex-wrap(wrap)
+.wm-popular-projects-block__item
+  margin: 0 10px 20px 10px
+  +flex(1 1 300px)
 //----- End Popular-projects -----
 
 //----- Consulting -----
@@ -214,6 +252,11 @@ textarea
 //----- End Consulting -----
 
 //----- Why-us -----
+.wm-why-us-block
+  +flexbox
+  +flex-wrap(wrap)
+.wm-why-us-block__column
+  +flex(1 1 230px)
 .wm-why-us-block-item
   margin-bottom: 50px
 .wm-why-us-block-item__image
@@ -233,13 +276,19 @@ textarea
   color: $color-base
   font-weight: 700
   text-transform: uppercase
-  width: 274px
+  max-width: 274px
 //----- End Why-us -----
 
 //----- Details -----
 .wm-details
   background: url("../images/bg2.png") no-repeat center
   background-size: cover
+.wm-details-block
+  +flexbox
+  +flex-wrap(wrap)
+.wm-details-block__item
+  +flex(1 1 380px)
+  margin: 0 20px
 .wm-details-block-item
   background-color: #ffffff
   padding: 20px
@@ -309,8 +358,19 @@ textarea
 .wm-question
   background: url("../images/bg-green.png") no-repeat
   background-size: cover
+.wm-question-block
+  +flexbox
+  +flex-wrap(wrap)
+.wm-question-block__photo
+  +flex(1 1 274px)
+  max-width: 300px
+.wm-question-block__info
+  +flex(3 1 300px)
 .wm-question-block-photo
   text-align: center
+  margin: 0 30px
+.wm-question-info
+  margin-top: 20px
 .wm-question-photo__image
   margin-bottom: 15px
 .wm-question-photo__phone
@@ -328,7 +388,8 @@ textarea
   margin-bottom: 30px
   text-shadow: 1px 1px 2px rgba(51, 51, 51, 1)
 .wm-question-info-form-input
-  width: 274px
+  max-width: 274px
+  min-width: 235px
   margin-right: 20px
 .wm-question-info-form__dispatch
   color: #ffffff
@@ -341,8 +402,18 @@ textarea
   background: url("../images/uzor_footer.png") no-repeat center
   background-size: cover
   padding: 40px 0 30px
+.wm-footer-block
+  +flexbox
+  +flex-wrap(wrap)
+  +justify-content(space-between)
+.wm-footer-block__right
+  +order(2)
+.wm-footer-block__left
+  +order(1)
 .wm-footer-right
   +clearfix
+  +flexbox
+  // +flex-wrap(wrap)
 .wm-footer-right__column
   +clearfix
 .wm-footer-agreement
@@ -352,6 +423,7 @@ textarea
   color: $color-base
   text-align: center
   text-decoration: underline
+  width: 105px
 .wm-footer-navigation__link
   font-size: 12px
   line-height: 18px
@@ -361,9 +433,15 @@ textarea
     color: $main-color-theme
 .wm-footer-right__column
   margin-bottom: 15px
+.wm-footer-right__navigation
+  max-width: 300px
+  width: 100%
+  margin-left: 40px
 .wm-footer-navigation
-  width: 50%
   float: left
+.wm-footer-navigation--left
+  margin-right: 40px
+.wm-footer-navigation--right
 .wm-footer-block__left
   color: $color-base
 .wm-footer-block-info
@@ -373,8 +451,120 @@ textarea
 .wm-footer-block-copyright
   font-size: 10px
   line-height: 12px
-
 //----- End Footer -----
+
+//----- Gategory Page -----
+//Bread-crumb
+.wm-bread-crumb
+  padding: 20px 0 0
+.wm-bread-crumb-block
+  background-color: #eeeeee
+  padding: 15px 10px
+  line-height: 18px
+.wm-bread-crumb-block__link
+  color: $color-base
+  margin-right: 5px
+  &:hover
+    color: $main-color-theme
+.wm-bread-crumb-block__triangle
+  color: #c9c9c9
+  font-size: 12px
+  margin-right: 5px
+
+//Description
+.wm-description
+  padding: 60px 0 20px
+.wm-description__sub-title
+  font-size: 16px
+  line-height: 20px
+  color: $color-base
+  text-transform: uppercase
+  font-family: $verdana
+  margin-bottom: 10px
+.wm-description__text
+  color: $color-base
+  font-family: $verdana
+
+//Filter
+.wm-filter
+  padding: 20px 0 30px
+  .main-btn
+    text-align: center
+    cursor: pointer
+    background-color: #ffffff
+    color: $main-color-theme
+    padding: 5px 12px
+    text-transform: lowercase
+    +border-radius(5px)
+    &:hover
+      background-color: $main-color-theme
+      color: #ffffff
+.wm-filter-block
+  margin-bottom: 20px
+  +flexbox
+  +flex-wrap(wrap)
+.wm-filter-block__item
+  +flex(1 1 auto)
+  min-width: 300px
+.wm-filter-item__title
+  color: $color-base
+  text-transform: uppercase
+  font-family: $verdana
+  font-weight: 700
+  margin-bottom: 10px
+.wm-filter-radio-block
+  +clearfix
+  li
+    float: left
+.wm-filter-radio-block__input
+  display: none
+.wm-filter-radio-block__input + label
+  margin-right: 20px
+.wm-filter-radio-block__input:checked + label
+  background-color: $main-color-theme
+  color: #ffffff
+.wm-sorting-block
+  line-height: 20px
+  +flexbox
+  +flex-wrap(wrap)
+  +justify-content(space-between)
+.wm-sorting-radio-block__text
+  display: inline-block
+  color: $color-base
+  text-transform: uppercase
+  font-family: $verdana
+  font-weight: 700
+.wm-sorting-radio-block__input
+  display: inline-block
+  margin-left: 5px
+.wm-sorting__input
+  display: none
+.wm-sorting__input + label
+  display: inline-block
+  color: #c9c9c9
+  font-size: 17px
+  margin-right: 2px
+  cursor: pointer
+.wm-sorting__input + label:hover
+  color: $main-color-theme
+.wm-sorting__input:checked + label
+  color: $main-color-theme
+.wm-sorting-results-block
+  color: #999999
+.wm-category-projects
+  padding: 20px 0 30px
+
+//Projects
+.wm-category-projects-block
+  +flexbox
+  +flex-direction(column)
+.wm-category-projects-block__item
+  margin-bottom: 20px
+  +flexbox
+  +flex-wrap(wrap)
+  +justify-content(space-between)
+
+//----- End Gategory Page -----
 
 //----- Media -----
 @media all and (min-width: 320px) and (max-width: 425px)
@@ -397,6 +587,14 @@ textarea
     margin: 10px 0
   .wm-navigation
     margin: 10px 0
+    li
+      display: block
+      float: none
+      text-align: center
+      border-right: none
+  //Popular
+  .wm-popular-projects-block__item
+    margin: 0
   //Consulting
   .wm-consulting__title
     margin-bottom: 30px
@@ -411,6 +609,14 @@ textarea
   //Details
   .wm-details__info .wm-phone__large
     font-size: 24px
+  .wm-details-block__item
+    margin: 0
+  .wm-details-block-item__text
+    font-size: 12px
+    line-height: 16px
+  .wm-details-block-item__title
+    font-size: 20px
+    line-height: 24px
   //Seo
   .wm-seo-wrap__video
     margin-bottom: 20px
@@ -439,11 +645,73 @@ textarea
   //Footer
   .wm-footer
     padding: 30px 0 20px
-  .wm-footer-navigation
-    width: 40%
-    float: left
-    margin-left: 8%
   .wm-footer-block-info
     margin-bottom: 30px
   .wm-footer-block-info
+    text-align: center
+  .wm-footer-right
+    display: block
+  .wm-footer-block__left
+    +order(2)
+  .wm-footer-agreement
+    margin: 0 auto
+  .wm-footer-block
+    display: block
+  .wm-footer-right__navigation
+    margin-left: 0
+@media all and (min-width: 426px) and (max-width: 767px)
+  .wm-navigation
+    li
+      padding: 0 5px
+  .wm-navigation__link
+    padding: 3px 5px
+  .wm-contact,.wm-logo
+    text-align: center
+  .wm-main-item
+    margin: 0 auto
+  .wm-consulting-form__input
+    display: block
+    margin-right: 0
+    margin: 0 auto 20px
+  .wm-why-us-block-item
+    margin-bottom: 30px
+  .wm-details-block__item
+    margin: 0
+  .wm-question-info, .wm-question-info__title
+    text-align: center
+  .wm-question-info-form-input
+    min-width: 274px
+    display: block
+    margin: 0 auto 20px
+  .wm-question-info-form__inputs
+    text-align: center
+  .wm-question-block__photo
+    margin: 0 auto
+  .wm-footer-block
+    display: block
+  .wm-footer-block__right
+    +order(1)
+  .wm-footer-block__left
+    +order(2)
+  .wm-footer-right
+    +justify-content(center)
+  .wm-footer-block-info
+    text-align: center
+  .wm-footer-right__navigation
+    margin-left: 20px
+  .wm-footer-navigation--left
+    margin-right: 20px
+@media all and (min-width: 768px) and (max-width: 1023px)
+  .wm-navigation
+    li
+      padding: 0 10px
+  .wm-navigation__link
+    padding: 3px 10px
+  .wm-main-item
+    margin: 0 auto
+  .wm-question-info-form-input
+    min-width: 274px
+    display: block
+    margin: 0 auto 20px
+  .wm-question-info-form__inputs
     text-align: center
