@@ -44,6 +44,7 @@ textarea
   height: 100%
   max-height: 200px
   background-color: #eeeeee
+  +transition(background-color 0.3s linear)
   img
     width: 100%
     height: 100%
@@ -67,6 +68,8 @@ textarea
     background-color: #cce1ba
   .wm-main-item-name
     text-decoration: underline
+  .wm-main-item__image
+    background-color: #cce1ba
 
 //Button's & Input's custom styles
 .main-btn
@@ -78,7 +81,7 @@ textarea
   font-size: 12px
   font-weight: 700
   border: 3px solid $main-color-theme
-  +border-radius(3px)
+  +border-radius(5px)
   +transition(0.2s linear)
   &:hover
     background-color: #ffffff
@@ -109,7 +112,44 @@ textarea
   font-size: 14px
   color: #999999
   box-sizing: border-box
-  +border-radius(3px)
+  +border-radius(5px)
+//Checkbox-toggle
+.checkbox
+  vertical-align: top
+  margin: 0 3px 0 0
+  width: 17px
+  height: 17px
+.checkbox + label
+  cursor: pointer
+.checkbox:not(checked)
+  position: absolute
+  opacity: 0
+.checkbox:not(checked) + label
+  position: relative
+  padding: 0 0 0 40px
+.checkbox:not(checked) + label:before
+  content: ''
+  position: absolute
+  top: 2px
+  left: 2px
+  width: 30px
+  height: 15px
+  border-radius: 13px
+  background: #CDD1DA
+.checkbox:not(checked) + label:after
+  content: ''
+  position: absolute
+  top: 2px
+  left: 2px
+  width: 15px
+  height: 15px
+  border-radius: 100%
+  background: #b5b5b5
+  transition: all .2s
+.checkbox:checked + label:after
+  background: #009227
+.checkbox:checked + label:after
+  left: 17px
   
 //----- Header -----
 //Header-top
@@ -424,6 +464,8 @@ textarea
   text-align: center
   text-decoration: underline
   width: 105px
+  &:hover
+    text-decoration: none
 .wm-footer-navigation__link
   font-size: 12px
   line-height: 18px
@@ -441,7 +483,6 @@ textarea
   float: left
 .wm-footer-navigation--left
   margin-right: 40px
-.wm-footer-navigation--right
 .wm-footer-block__left
   color: $color-base
 .wm-footer-block-info
@@ -504,8 +545,26 @@ textarea
   +flexbox
   +flex-wrap(wrap)
 .wm-filter-block__item
-  +flex(1 1 auto)
+  margin-right: 20px
   min-width: 300px
+.wm-filter-block__item:last-child
+  margin-right: 0
+.wm-filter-item--size
+  +flex(1 1 300px)
+  .main-btn
+    padding: 5px 0
+    width: 60px
+.wm-filter-item--price
+  +flex(3 1 300px)
+  .main-btn
+    padding: 5px 0
+    width: 110px
+.wm-filter-item--square
+  min-width: 350px
+  +flex(3 1 300px)
+  .main-btn
+    padding: 5px 0
+    width: 110px
 .wm-filter-item__title
   color: $color-base
   text-transform: uppercase
@@ -516,10 +575,13 @@ textarea
   +clearfix
   li
     float: left
+  li:last-child
+    .main-btn
+      margin-right: 0
 .wm-filter-radio-block__input
   display: none
 .wm-filter-radio-block__input + label
-  margin-right: 20px
+  margin-right: 18px
 .wm-filter-radio-block__input:checked + label
   background-color: $main-color-theme
   color: #ffffff
@@ -559,12 +621,201 @@ textarea
   +flexbox
   +flex-direction(column)
 .wm-category-projects-block__item
-  margin-bottom: 20px
   +flexbox
   +flex-wrap(wrap)
   +justify-content(space-between)
+.wm-category-projects-item
+  margin: 0 10px 20px 10px
+  +flex(1 1 300px)
+.wm-category-projects__more
+  margin-top: 20px
+.wm-category-projects-more
+  margin: 0 auto
+  width: 117px
+  height: 106px
+  position: relative
+  cursor: pointer
+  &:hover
+    .wm-category-projects-more__image
+      +transform(rotate(180deg))
+  .wm-category-projects-more__image
+    +transition(0.5s linear)
+.wm-category-projects-more__text
+  width: 70px
+  position: absolute
+  top: 50%
+  margin-top: -16px
+  left: 50%
+  margin-left: -35px
+  color: $main-color-theme
+  text-transform: uppercase
+  text-align: center
 
+//Banner
+.wm-banner
+  padding: 30px 0 0
+  img
+    width: 100%
+    height: 100%
 //----- End Gategory Page -----
+
+//----- Card_item Page -----
+.wm-description_card
+  padding: 60px 0 30px
+.wm-description_card__title
+  text-align: center
+.wm-description_card-block
+  +clearfix
+.wm-description_card-block__item
+  float: left
+  width: 50%
+.lSSlideOuter .lSPager.lSGallery
+  width: 100% !important
+  height: 100%
+  li
+    float: none
+    display: inline-block
+    width: calc(25% - 3px) !important
+.wm-description_card-slider__item
+  img
+    width: 100%
+    height: 100%
+.wm-description_card-sizes
+  padding-left: 20px
+.wm-description_card-sizes__title
+  font-size: 16px
+  line-height: 20px
+  font-family: $verdana
+  color: $color-base
+  text-transform: uppercase
+  margin-bottom: 20px
+.wm-description_card-sizes-block
+  font-size: 16px
+  margin-bottom: 60px
+  +flexbox
+  +flex-wrap(wrap)
+.wm-description_card-sizes-block__item
+  box-sizing: border-box
+  +flex(1 1 264px)
+.wm-description_card-sizes-block__item:first-child
+  border-right: 2px solid #c9c9c9
+  padding-right: 13px
+.wm-description_card-sizes-block__item:last-child
+  padding-left: 15px
+.wm-description_card-sizes-block-info
+  margin-right: 13px
+  td
+    padding-bottom: 15px
+  tr:last-child td
+    padding-bottom: 0
+.wm-description_card-sizes-block-price__text, .wm-description_card-sizes-block-info__text
+  color: $color-base
+.wm-description_card-sizes-block-info__numbers
+  font-weight: 700
+  text-align: right
+  color: $color-base
+.wm-description_card-sizes-block-price__numbers
+  font-weight: 700
+  text-align: right
+  color: $main-color-theme
+.wm-description_card-sizes-block-price
+  td
+    padding-bottom: 15px
+.wm-description_card-sizes__btn
+  text-align: center
+  .main-btn
+    padding: 12px 32px
+
+//Equipment
+.wm-equipment
+  padding: 30px 0 60px
+.wm-equipment__title
+  font-size: 16px
+  line-height: 20px
+  font-family: $verdana
+  color: $color-base
+  text-transform: uppercase
+  margin-bottom: 20px
+.wm-equipment-block
+  +flexbox
+  +flex-wrap(wrap)
+.wm-equipment-block__form
+  margin-right: 20px
+  +flex(2)
+.wm-equipment-form__row
+  line-height: 48px
+  border-bottom: 1px dotted #c9c9c9
+  +flexbox
+  +flex-wrap(wrap)
+.wm-equipment-form__row:last-child
+  border-bottom: 0
+.wm-equipment-form-row__text
+  font-size: 16px
+  font-family: $verdana
+  +flex(1)
+.wm-equipment-form-row__choose
+  text-align: right
+  color: $color-base
+  font-family: $verdana
+  +flex(2)
+.wm-equipment-choose__select
+  border: 1px solid #c9c9c9
+  padding: 6px 10px
+  color: $color-base
+  box-sizing: border-box
+  +border-radius(3px)
+.wm-equipment-choose-select--profile
+  width: 275px
+.wm-equipment-choose-select--walls, .wm-equipment-choose-select--inside
+  width: 375px
+.wm-equipment-choose-select--binding
+  width: 275px
+  margin-left: 10px
+.wm-equipment-block__price
+  +flex(1)
+.wm-equipment-price__summary
+  font-family: $verdana
+  text-align: right
+  margin-bottom: 35px
+.wm-equipment-price-summary__text
+  font-size: 16px
+  line-height: 20px
+.wm-equipment-price-summary__number
+  font-size: 28px
+  line-height: 30px
+  color: $main-color-theme
+.wm-equipment-price__btn
+  text-align: right
+  .main-btn
+    padding: 12px 32px
+    +border-radius(5px)
+
+//Advantages
+.wm-advantages
+  padding-bottom: 10px
+  background: url(../images/bg2.png) no-repeat center
+  background-size: cover
+.wm-advantages__title
+  margin-bottom: 50px
+.wm-advantages-block
+  +flexbox
+  +flex-wrap(wrap)
+.wm-advantages-block__item
+  +flex(1)
+  .wm-why-us-block-item__title
+    color: #ffffff
+    text-transform: uppercase
+
+//Interest
+.wm-interest-block
+  +flexbox
+  +flex-wrap(wrap)
+.wm-interest-bloc__item
+  margin-bottom: 20px
+  +flex(1 1 300px)
+  .wm-main-item
+    margin: 0 auto
+//----- End Card_item Page -----
 
 //----- Media -----
 @media all and (min-width: 320px) and (max-width: 425px)
@@ -642,6 +893,9 @@ textarea
     margin-bottom: 10px
   .wm-question-info-form__dispatch
     text-align: center
+  //Category
+  .wm-category-projects-item
+    margin: 0
   //Footer
   .wm-footer
     padding: 30px 0 20px
@@ -659,6 +913,43 @@ textarea
     display: block
   .wm-footer-right__navigation
     margin-left: 0
+  //Filter
+  .wm-filter-block__item
+    text-align: center
+    margin-bottom: 20px
+    min-width: 300px
+    li
+      float: none
+      display: inline-block
+  .wm-filter-item--price
+    .main-btn
+      width: 90px
+      margin-right: 0
+  .wm-filter-item--square
+    .main-btn
+      width: 90px
+      margin-right: 0
+  .wm-filter-item--size
+    .main-btn
+      width: 55px
+      margin-right: 10px
+  //Description
+  .wm-description_card-block__item
+    float: none
+    width: 100%
+    margin-bottom: 10px
+  .wm-description_card-sizes
+    padding-left: 0
+  .wm-description_card-sizes-block
+    font-size: 14px
+  .wm-description_card-sizes-block__item
+    +flex(1 1 240px)
+  .wm-description_card-sizes-block__item:first-child
+    border-color: transparent
+    margin-bottom: 10px
+  .wm-description_card-sizes-block__item:last-child
+    padding-left: 0
+    padding-right: 15px
 @media all and (min-width: 426px) and (max-width: 767px)
   .wm-navigation
     li
@@ -671,7 +962,6 @@ textarea
     margin: 0 auto
   .wm-consulting-form__input
     display: block
-    margin-right: 0
     margin: 0 auto 20px
   .wm-why-us-block-item
     margin-bottom: 30px
@@ -701,6 +991,34 @@ textarea
     margin-left: 20px
   .wm-footer-navigation--left
     margin-right: 20px
+  .wm-filter-block__item
+    text-align: left
+    margin-bottom: 20px
+    min-width: 350px
+    li
+      float: none
+      display: inline-block
+  .wm-filter-item--price
+    .main-btn
+      width: 90px
+      margin-right: 10px
+  .wm-filter-item--square
+    .main-btn
+      width: 90px
+  .wm-filter-item--size
+    .main-btn
+      width: 60px
+      margin-right: 10px
+  .wm-description_card-block__item
+    float: none
+    width: 100%
+    margin-bottom: 10px
+  .wm-description_card-sizes
+    padding-left: 0
+  .wm-description_card-sizes-block
+    font-size: 14px
+  .wm-description_card-sizes-block__item
+    +flex(1 1 240px)
 @media all and (min-width: 768px) and (max-width: 1023px)
   .wm-navigation
     li
@@ -715,3 +1033,53 @@ textarea
     margin: 0 auto 20px
   .wm-question-info-form__inputs
     text-align: center
+  .wm-filter-block__item
+    text-align: center
+    margin-bottom: 20px
+    li
+      float: none
+      display: inline-block
+  .wm-filter-item--price
+    .main-btn
+      width: 90px
+      margin-right: 10px
+  .wm-filter-item--square
+    .main-btn
+      width: 90px
+  .wm-filter-item--size
+    .main-btn
+      width: 60px
+      margin-right: 10px
+  .wm-description_card-sizes-block__item:first-child
+    border-color: transparent
+    margin-bottom: 10px
+  .wm-description_card-sizes-block__item:last-child
+    padding-left: 0
+    padding-right: 15px
+@media all and (min-width: 1024px) and (max-width: 1200px)
+  .wm-filter-item--price
+    .main-btn
+      width: 90px
+      margin-right: 10px
+  .wm-filter-item--square
+    .main-btn
+      width: 90px
+  .wm-filter-item--size
+    .main-btn
+      width: 60px
+      margin-right: 10px
+
+@media all and (min-width: 1024px) and (max-width: 1115px)
+  .wm-description_card-sizes-block__item:first-child
+    border-color: transparent
+    margin-bottom: 10px
+  .wm-description_card-sizes-block__item:last-child
+    padding-left: 0
+    padding-right: 15px
+@media all and (min-width: 426px) and (max-width: 499px)
+  .wm-description_card-sizes-block__item:first-child
+    border-color: transparent
+    margin-bottom: 10px
+  .wm-description_card-sizes-block__item:last-child
+    padding-left: 0
+    padding-right: 15px

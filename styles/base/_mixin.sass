@@ -198,9 +198,15 @@
   order: $order
 
 @mixin justify-content($justify-content)
+  -webkit-box-justify-content: $justify-content
+  -moz-box-justify-content: $justify-content
+  -ms-justify-content: $justify-content
   -webkit-justify-content: $justify-content
   justify-content: $justify-content
 
 @mixin align-items($align-items)
+  -webkit-box-align-items: $align-items
+  -moz-box-align-items: $align-items
+  -ms-align-items: $align-items
   -webkit-align-items: $align-items
   align-items: $align-items
