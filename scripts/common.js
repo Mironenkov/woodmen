@@ -17,4 +17,15 @@
             });
         }
     });
+    $('.wm-about_slider').lightSlider({
+        item:6,
+        loop:true,
+        slideMargin:20,
+        slideMove: 2,
+        auto: true,
+        cssEasing: 'ease',
+        speed: 1500,
+        pauseOnHover: true,
+        controls: false
+    });
 })();

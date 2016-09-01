@@ -817,6 +817,230 @@ textarea
     margin: 0 auto
 //----- End Card_item Page -----
 
+//----- Price Page -----
+.wm-price
+  padding: 60px 0 0
+  .main
+    max-width: 800px
+.wm-price-block__title
+  color: $color-base
+  font-family: $verdana
+.wm-price-calculator
+  color: $color-base
+  font-family: $verdana
+  margin-bottom: 20px
+  +flexbox
+  +flex-direction(column)
+.wm-price-row
+  padding: 10px 0
+  line-height: 30px
+  border-bottom: 1px dotted #c9c9c9
+  +flexbox
+  +flex-wrap(wrap)
+  &:last-child
+    border-bottom: none
+  &:nth-child(3)
+    line-height: 25px
+.wm-price-row__name
+  +flex(1 1 366px)
+.wm-price-row__select-wrap
+  text-align: right
+  +flex(1 1 365px)
+.wm-price-input
+  max-width: 274px
+  width: 100%
+  border: 1px solid #c9c9c9
+  padding: 5px 10px
+  color: $color-base
+  font-family: $verdana
+  box-sizing: border-box
+  +border-radius(5px)
+.wm-price-input--width
+  max-width: 75px
+.wm-price-btn-wrap
+  text-align: center
+.wm-price-btn
+  width: 100%
+  max-width: 274px
+//----- End Price Page -----
+
+//----- About Page -----
+//About
+.wm-about
+  padding: 60px 0 0
+.wm-about-block
+  margin-bottom: 40px
+  +flexbox
+  +flex-wrap(wrap)
+.wm-about-block__image
+  margin-right: 20px
+  +flex(1)
+  img
+    width: 100%
+.wm-about-block__info
+  +flex(2)
+.wm-about-block--second
+  .wm-about-block__info
+    +order(1)
+  .wm-about-block__image
+    margin-right: 0
+    margin-left: 20px
+    +order(2)
+.wm-about-info__title
+  font-size: 22px
+  line-height: 26px
+  color: $color-base
+  text-transform: uppercase
+  font-family: $verdana
+  font-weight: 400
+  margin: 40px 0
+.wm-about-info__text
+  font-size: 16px
+  line-height: 20px
+  color: $color-text-base
+  text-align: justify
+.wm-about-info__list
+  ul
+    list-style: disc
+    li
+      margin: 0 0 20px 20px
+      padding-left: 10px
+
+//Numbers
+.wm-numbers
+  padding: 20px 0 30px
+.wm-numbers__title
+  text-align: center
+.wm-numbers-block
+  +flexbox
+  +flex-wrap(wrap)
+.wm-numbers-block__item
+  +flex(1)
+  &:first-child
+    .wm-numbers-circle__image
+      margin-bottom: 3px
+.wm-numbers-circle
+  width: 174px
+  height: 174px
+  background-color: #e5e5e5
+  margin: 0 auto 20px
+  text-align: center
+  +flexbox
+  +flex-direction(column)
+  +justify-content(center)
+  +border-radius(50%)
+.wm-numbers-circle__image
+  margin-bottom: 15px
+.wm-numbers-circle__text
+  font-size: 36px
+  line-height: 38px
+  color: $main-color-theme
+  font-weight: 700
+.wm-numbers-item__title
+  text-align: center
+  font-weight: 700
+  text-transform: uppercase
+  color: $color-base
+
+//Slider
+.wm-slider
+  padding: 30px 0 0
+  .lSSlideOuter .lSPager.lSpg > li a
+    background-color: #999999
+  .lSSlideOuter .lSPager.lSpg > li:hover a, .lSSlideOuter .lSPager.lSpg > li.active a
+    background-color: $main-color-theme
+    width: 15px
+    height: 15px
+  .lSSlideOuter .lSPager.lSpg > li.active, .lSSlideOuter .lSPager.lSpg > li:hover
+    line-height: 11px
+    vertical-align: middle
+  .lSSlideOuter .lSPager.lSpg
+    line-height: 30px
+//----- End About Page -----
+
+//----- Blog Page -----
+.wm-blog__title-wrap, .wm-pager-wrap
+  +clearfix
+.wm-blog-title
+  float: left
+.wm-pager
+  float: right
+  line-height: 33px
+.wm-pager__link
+  font-size: 18px
+  font-family: $verdana
+  color: $color-base
+  margin: 0 10px
+  display: inline-block
+  &:hover
+    background-color: green
+    color: #fff
+    border-radius: 50%
+    padding: 0 10px
+    margin: 0
+.wm-pager-link--active
+  background-color: green
+  color: #fff
+  border-radius: 50%
+  padding: 0 10px
+  margin: 0
+.wm-blog-article
+  margin-bottom: 60px
+  +flexbox
+  +flex-wrap(wrap)
+.wm-blog-article__image
+  margin-right: 20px
+  min-width: 274px
+  +flex(1)
+  img
+    width: 100%
+.wm-blog-article__info
+  +flex(3)
+.wm-blog-article-info
+  color: $color-base
+.wm-blog-article-info__title
+  font-size: 16px
+  line-height: 18px
+  text-transform: uppercase
+  margin-bottom: 10px
+  font-weight: 400
+.wm-blog-article-info__date
+  margin-bottom: 15px
+.wm-blog-article-info__text
+  max-height: 146px
+  overflow: hidden
+  text-align: justify
+.wm-blog-article-info__btn
+  margin-top: 5%
+  text-align: right
+//----- End Blog Page -----
+
+//----- End Blog_article Page -----
+.wm-article__title
+  margin-bottom: 40px
+.wm-article-block
+  max-width: 960px
+  margin: 30px auto 40px
+.wm-article-block__image
+  text-align: center
+  margin-bottom: 25px
+.wm-article-pager
+  text-align: center
+  line-height: 50px
+.wm-article-pager__text
+  display: inline-block
+  font-size: 18px
+  color: #999999
+  text-transform: uppercase
+  margin: 0 40px
+  position: relative
+  top: -10px
+.wm-article-pager__link
+  color: $main-color-theme
+  font-size: 50px
+  display: inline
+//----- End Blog_article Page -----
+
 //----- Media -----
 @media all and (min-width: 320px) and (max-width: 425px)
   .content-block
@@ -950,6 +1174,10 @@ textarea
   .wm-description_card-sizes-block__item:last-child
     padding-left: 0
     padding-right: 15px
+  .wm-price-row__name, .wm-price-row__select-wrap
+    text-align: center
+  .wm-price-row__name
+    margin-bottom: 5px
 @media all and (min-width: 426px) and (max-width: 767px)
   .wm-navigation
     li
@@ -1019,6 +1247,8 @@ textarea
     font-size: 14px
   .wm-description_card-sizes-block__item
     +flex(1 1 240px)
+  .wm-price-row__name, .wm-price-row__select-wrap
+    text-align: center
 @media all and (min-width: 768px) and (max-width: 1023px)
   .wm-navigation
     li
