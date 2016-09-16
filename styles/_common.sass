@@ -1041,6 +1041,155 @@ textarea
   display: inline
 //----- End Blog_article Page -----
 
+//----- Our_projects Page -----
+.wm-our_works-block__title
+  font-size: 22px
+  line-height: 26px
+  font-family: $verdana
+  text-transform: uppercase
+  margin-bottom: 30px
+  font-weight: 400
+  color: $color-base
+.wm-our_works__block
+  margin-bottom: 50px
+.wm-our_works-images
+  +flexbox
+  +flex-wrap(wrap)
+.wm-our_works-images__item
+  margin: 10px
+  +flex(1 1 274px)
+  img
+    width: 100%
+    height: 100%
+//----- End Our_projects Page -----
+
+//----- Reviews Page -----
+.wm-reviews__title-wrap
+  +clearfix
+.wm-reviews-title
+  float: left
+.wm-reviews-item
+  padding-bottom: 30px
+  margin-bottom: 30px
+  border-bottom: 2px solid #c9c9c9
+  +flexbox
+  +flex-wrap(wrap)
+.wm-reviews-item__client
+  +flex(1)
+.wm-reviews-item__info
+  +flex(5)
+.wm-reviews-client
+  text-align: center
+  color: $color-base
+  margin: 0 20px 20px 0
+.wm-reviews-client__image
+  margin: 0 auto 20px
+  width: 176px
+  height: 176px
+  +border-radius(50%)
+.wm-reviews-client__name
+  font-size: 16px
+  line-height: 18px
+  margin-bottom: 5px
+.wm-reviews-info__text
+  line-height: 18px
+  text-align: justify
+  color: $color-base
+  margin-bottom: 20px
+.wm-reviews-info__photo-block
+  text-align: center
+  img
+    margin: 0 10px
+    width: 176px
+    height: 133px
+.wm-reviews_form
+  padding: 0 0 60px
+.wm-reviews_form-block
+  +flexbox
+  +flex-wrap(wrap)
+.wm-reviews_form-block__photo
+  text-align: center
+  +flex(1)
+.wm-reviews_form-block__inputs
+  +flex(5)
+.wm-reviews_form-input, .wm-reviews_form__textarea
+  border: 1px solid #c9c9c9
+  background-color: transparent
+  padding: 15px
+  color: $color-base
+  box-sizing: border-box
+  width: 100%
+  margin-bottom: 20px
+  +border-radius(5px)
+.wm-reviews_form__textarea
+  height: 114px
+.wm-reviews_form-block-inputs
+  +flexbox
+  +flex-wrap(wrap)
+.wm-reviews_form-block-inputs__info
+  margin-right: 20px
+  +flex(1)
+.wm-reviews_form-block-inputs__review
+  +flex(2)
+.wm-reviews_form__btn
+  text-align: right
+//----- End Reviews Page -----
+
+//----- Contacts Page -----
+.wm-contacts-block
+  margin-bottom: 40px
+  +flexbox
+  +flex-wrap(wrap)
+.wm-contacts-block__item
+  +flex(1)
+.wm-contacts-item__title
+  font-size: 22px
+  line-height: 26px
+  font-family: $verdana
+  text-transform: uppercase
+  margin-bottom: 30px
+  font-weight: 400
+  color: $color-base
+.wm-contacts-item__address
+  font-size: 16px
+  line-height: 18px
+  margin-bottom: 10px
+.wm-contacts-item__phone
+  font-size: 16px
+  line-height: 18px
+.wm-contacts-map
+  padding: 20px
+  position: relative
+.wm-contacts-map__top
+  width: 325px
+  line-height: 85px
+  font-size: 16px
+  color: #fff
+  background-color: $main-color-theme
+  text-align: center
+.wm-contacts-map__top
+  position: absolute
+  top: 0
+  left: 0
+  z-index: 100
+.wm-contacts-map__iframe
+  position: relative
+  &::before
+    content: ''
+    position: absolute
+    bottom: 0
+    right: -20px
+    height: 35%
+    border-right: 20px solid $main-color-theme
+  &::after
+    content: ''
+    position: absolute
+    bottom: -18px
+    right: -20px
+    width: 35%
+    border-bottom: 20px solid $main-color-theme
+//----- End Contacts Page -----
+
 //----- Media -----
 @media all and (min-width: 320px) and (max-width: 425px)
   .content-block
